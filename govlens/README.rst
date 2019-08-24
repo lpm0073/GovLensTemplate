@@ -18,6 +18,7 @@ Setup
 https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
 
 ::
+
     cd <project directory>
 
     # create a virtual environment on your local machine
