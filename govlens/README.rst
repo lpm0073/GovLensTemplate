@@ -15,7 +15,16 @@ Behold Gov Lens Template
 
 Setup
 --------
-https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
+
+Added by Lawrence McDaniel (lpm0073). These are my own work notes from 24-August
+to get the Cookie Cutter scaffolded project up and running in my local
+development environment which, in my case, is a MacBook Pro.
+
+The Cookiecutter-Django online documentation is really good. I mostly
+followed the step-by-step instructions here: https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
+In my case I had some challenges getting Postgres to work. I had to install it,
+which I elected to do via Homebrew. Like most database server technology, it was
+neither seamless nor turnkey. alas. :/
 
 ::
 
