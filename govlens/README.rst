@@ -13,6 +13,39 @@ Behold Gov Lens Template
 
 :License: MIT
 
+Setup
+--------
+https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
+
+::
+    cd <project directory>
+
+    # create a virtual environment on your local machine
+    python3.6 -m venv .
+
+    # activate the virtual environment
+    source ./bin/activate
+
+    # install the project requirements locally
+    pip install -r requirements/local.txt
+
+
+    # optional for mac os: install postgres locally using Homebrew
+    brew install postgres
+    /usr/local/opt/postgres/bin/createuser -s postgres
+    pg_ctl -D /usr/local/var/postgres start
+    # or if you prefer: brew services start postgresql
+
+    # create a local database
+    createdb govlens -U postgres --password govlens
+
+
+    # set Django's environment variable to the local db
+    export DATABASE_URL=postgres://postgres:govlens@127.0.0.1:5432/govlens
+
+    # set Celery broker URL
+    export CELERY_BROKER_URL=redis://localhost:6379/0
+
 
 Settings
 --------
@@ -100,7 +133,3 @@ Deployment
 ----------
 
 The following details how to deploy this application.
-
-
-
-
