@@ -2,8 +2,8 @@ import pytest
 from celery.result import EagerResult
 
 
-from gov_lens_template.users.tasks import get_users_count
-from gov_lens_template.users.tests.factories import UserFactory
+from govlens.users.tasks import get_users_count
+from govlens.users.tests.factories import UserFactory
 
 
 @pytest.mark.django_db

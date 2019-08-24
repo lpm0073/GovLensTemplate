@@ -280,7 +280,7 @@ pip-selfcheck.json
 
 ### Project template
 
-gov_lens_template/media/
+govlens/media/
 
 .pytest_cache/
 

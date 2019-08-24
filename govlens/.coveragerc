@@ -1,5 +1,5 @@
 [run]
-include = gov_lens_template/*
+include = govlens/*
 omit = *migrations*, *tests*
 plugins =
     django_coverage_plugin

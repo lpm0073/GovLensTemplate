@@ -1,6 +1,6 @@
 from django.urls import path
 
-from gov_lens_template.users.views import (
+from govlens.users.views import (
     user_redirect_view,
     user_update_view,
     user_detail_view,

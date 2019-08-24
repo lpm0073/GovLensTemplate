@@ -3,11 +3,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class UsersConfig(AppConfig):
-    name = "gov_lens_template.users"
+    name = "govlens.users"
     verbose_name = _("Users")
 
     def ready(self):
         try:
-            import gov_lens_template.users.signals  # noqa F401
+            import govlens.users.signals  # noqa F401
         except ImportError:
             pass

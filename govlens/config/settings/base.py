@@ -6,8 +6,8 @@ import environ
 
 ROOT_DIR = (
     environ.Path(__file__) - 3
-)  # (gov_lens_template/config/settings/base.py - 3 = gov_lens_template/)
-APPS_DIR = ROOT_DIR.path("gov_lens_template")
+)  # (govlens/config/settings/base.py - 3 = govlens/)
+APPS_DIR = ROOT_DIR.path("govlens")
 
 env = environ.Env()
 
@@ -43,7 +43,7 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///gov_lens_template")
+    "default": env.db("DATABASE_URL", default="postgres:///govlens")
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
@@ -76,7 +76,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "gov_lens_template.users.apps.UsersConfig",
+    "govlens.users.apps.UsersConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -85,7 +85,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # MIGRATIONS
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "gov_lens_template.contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "govlens.contrib.sites.migrations"}
 
 # AUTHENTICATION
 # ------------------------------------------------------------------------------
@@ -280,9 +280,9 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "gov_lens_template.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "govlens.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "gov_lens_template.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "govlens.users.adapters.SocialAccountAdapter"
 
 
 # Your stuff...

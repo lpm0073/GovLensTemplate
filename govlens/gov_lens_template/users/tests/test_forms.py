@@ -1,7 +1,7 @@
 import pytest
 
-from gov_lens_template.users.forms import UserCreationForm
-from gov_lens_template.users.tests.factories import UserFactory
+from govlens.users.forms import UserCreationForm
+from govlens.users.tests.factories import UserFactory
 
 pytestmark = pytest.mark.django_db
 

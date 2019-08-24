@@ -77,17 +77,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/gov_lens_template.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/govlens.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/gov_lens_template.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/govlens.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/gov_lens_template"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/gov_lens_template"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/govlens"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/govlens"
 	@echo "# devhelp"
 
 epub:

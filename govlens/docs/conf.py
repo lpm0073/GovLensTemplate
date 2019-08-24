@@ -163,7 +163,7 @@ html_static_path = ["_static"]
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "gov_lens_templatedoc"
+htmlhelp_basename = "govlensdoc"
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -182,7 +182,7 @@ latex_elements = {
 latex_documents = [
     (
         "index",
-        "gov_lens_template.tex",
+        "govlens.tex",
         "Gov Lens Template Documentation",
         """MuckRock""",
         "manual",
@@ -217,7 +217,7 @@ latex_documents = [
 man_pages = [
     (
         "index",
-        "gov_lens_template",
+        "govlens",
         "Gov Lens Template Documentation",
         ["""MuckRock"""],
         1,
@@ -236,7 +236,7 @@ man_pages = [
 texinfo_documents = [
     (
         "index",
-        "gov_lens_template",
+        "govlens",
         "Gov Lens Template Documentation",
         """MuckRock""",
         "Gov Lens Template",
