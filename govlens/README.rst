@@ -56,6 +56,12 @@ neither seamless nor turnkey. alas. :/
     # set Celery broker URL
     export CELERY_BROKER_URL=redis://localhost:6379/0
 
+    # install node modules
+    npm install
+
+    # run webpack to load React components
+    npm run dev
+
 
 Settings
 --------
