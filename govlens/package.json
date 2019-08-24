@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.4.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "browser-sync": "^2.14.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
@@ -13,7 +18,13 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
-    "pixrem": "^5.0.0"
+    "pixrem": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "weak-key": "^1.0.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   },
   "engines": {
     "node": ">=8"
@@ -22,7 +33,15 @@
     "last 2 versions"
   ],
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp generate-assets"
-  }
+    "dev": "webpack --mode development ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output /frontend/static/frontend/main.js"
+  },
+  "description": "Gov Lens Template\r =================",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
