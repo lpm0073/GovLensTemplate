@@ -14,7 +14,7 @@ env = environ.Env()
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
-    env.read_env(str(ROOT_DIR.path(".env")))
+    env.read_env()
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
-    "django.contrib.admin",
+    "django.contrib.admin"
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -77,6 +77,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "govlens.users.apps.UsersConfig",
+    "govlens.leads.apps.LeadsConfig",
+    "frontend"
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
