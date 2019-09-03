@@ -78,6 +78,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "govlens.users.apps.UsersConfig",
     "govlens.leads.apps.LeadsConfig",
+    "govlens.agencies.apps.AgenciesConfig",
     "frontend"
     # Your stuff: custom apps go here
 ]
@@ -247,6 +248,11 @@ LOGGING = {
         }
     },
     "root": {"level": "INFO", "handlers": ["console"]},
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2
 }
 
 # Celery

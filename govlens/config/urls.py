@@ -15,7 +15,8 @@ urlpatterns = [
     path("users/", include("govlens.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path('', include('govlens.leads.urls')),
-    path('', include('frontend.urls'))
+    path('', include('frontend.urls')),
+    path('', include('govlens.agencies.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
